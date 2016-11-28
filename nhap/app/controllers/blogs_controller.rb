@@ -3,8 +3,9 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
   def create
-    article = Blog.create(article_params)
-    if(article.nil?)
+    @article = Blog.create(article_params)
+    unless(@article.save)
+      flash[:error] = "Error: Cannot create new article"
       render 'new'
     else
       redirect_to blogs_path

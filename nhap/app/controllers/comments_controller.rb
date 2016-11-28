@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if comment.save
       redirect_to blog_path(params[:blog_id])
     else
-      flash[:error] = "Can not create comment"
+      flash[:error] = "Can not create new comment"
       redirect_to blog_path(params[:blog_id])
     end
 

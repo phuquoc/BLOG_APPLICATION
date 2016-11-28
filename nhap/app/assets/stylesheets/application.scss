@@ -1,3 +1,22 @@
 @import 'blogs';
 @import "hello";
 @import "bootstrap";
+@import "variables";
+
+.wrapper {
+  .header{
+
+  }
+  .footer {
+
+  }
+  .content {
+    .sidebar {
+      width: $sidebar-width
+  }
+  .main-content {
+
+  }
+
+  }
+}
